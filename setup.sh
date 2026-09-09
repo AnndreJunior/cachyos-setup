@@ -196,7 +196,7 @@ setup_aur_packages() {
 
     for pkg in "${pkgs[@]}"; do
         if is_installed yay "$pkg"; then
-            echo ">>> [$pkg] já está instalado, omitendo"
+            echo ">>> [$pkg] já está instalado, omitindo"
         else
             to_install+=("$pkg")
         fi
@@ -222,7 +222,7 @@ setup_flatpak_packages() {
     echo ">>> [3c/3] Instalando aplicações Flatpak..."
 
     if ! command -v flatpak &>/dev/null; then
-        echo ">>> 'flatpak' não está instalado, omitendo etapa"
+        echo ">>> 'flatpak' não está instalado, omitindo etapa"
         return 0
     fi
 
@@ -235,7 +235,7 @@ setup_flatpak_packages() {
 
     for pkg in "${pkgs[@]}"; do
         if is_installed flatpak "$pkg"; then
-            echo ">>> [$pkg] já está instalado, omitendo"
+            echo ">>> [$pkg] já está instalado, omitindo"
         else
             to_install+=("$pkg")
         fi
