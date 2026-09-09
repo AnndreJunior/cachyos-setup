@@ -1,7 +1,7 @@
 git
 yay
 base-devel
-debeaver
+dbeaver
 cachyos-gaming-meta
 cachyos-gaming-applications
 zsh
