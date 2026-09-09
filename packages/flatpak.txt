@@ -1,0 +1,4 @@
+app.ytmdesktop.ytmdesktop
+com.discordapp.Discord
+com.usebruno.Bruno
+org.kde.kclock
