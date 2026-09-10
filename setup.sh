@@ -275,11 +275,7 @@ setup_docker() {
         run_cmd sudo usermod -aG docker "$USER"
     fi
 
-    # 3. Aplicar as mudanças de grupo na sessão atual
-    echo ">>> Aplicando mudanças de grupo na sessão atual..."
-    run_cmd newgrp docker
-
-    # 4. Habilitar e iniciar o serviço docker (systemctl enable --now)
+    # 3. Habilitar e iniciar o serviço docker (systemctl enable --now)
     if systemctl is-enabled docker &>/dev/null && systemctl is-active docker &>/dev/null; then
         echo ">>> Serviço 'docker' já está habilitado e ativo, omitindo"
     else
